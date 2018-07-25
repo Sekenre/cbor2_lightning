@@ -28,6 +28,8 @@ Binary Serialization
 cbor2
 +++++
 
+https://github.com/agronholm/cbor2
+
 * Pure Python implementation by Alex Grönholm
 * Works in Python 2.7 to 3.6
 * Clear and readable code
