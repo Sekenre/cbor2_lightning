@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Kio Smallwood">
+  <title>CBOR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">CBOR</h1>
+  <p class="author">Kio Smallwood</p>
+  <p class="date">26/07/2019</p>
+</section>
+
+<section id="binary-serialization" class="slide level1">
+<h1>Binary Serialization</h1>
+<ul>
+<li>Inspired by msgpack</li>
+<li>IETF proposed standard (RFC 7049)</li>
+<li>Tag-Length-Value encoding</li>
+<li>Designed to be compact</li>
+<li>Native recursive data structures</li>
+<li><p>Extensible tag system ( with an IANA registry )</p>
+<ul>
+<li class="fragment">e.g. Tag 258 encodes a Python Set</li>
+</ul></li>
+</ul>
+<aside class="notes">
+    inspired, meaning I didn't like the way you run your project so I'm going to fork it!
+</aside>
+</section>
+<section id="cbor2" class="slide level1">
+<h1>cbor2</h1>
+<ul>
+<li>Pure Python implementation by Alex Grönholm</li>
+<li>Works in Python 2.7 to 3.6</li>
+<li>Clear and readable code</li>
+<li>Thorough test suite</li>
+<li>Only python cbor library that supports canonicalization</li>
+</ul>
+</section>
+<section id="when-to-use" class="slide level1">
+<h1>when to use?</h1>
+<ul>
+<li>When you need richer types than JSON or Msgpack</li>
+<li>When you don't want to write a schema</li>
+<li>When it needs to be more compact than XML</li>
+</ul>
+</section>
+<section id="i-use-it-for" class="slide level1">
+<h1>I use it for</h1>
+<ul>
+<li>Compacting time series data in CSV</li>
+<li>Internal APIs when I don't want to create a custom JSONEncoder just to send a datetime</li>
+<li>IoT messaging</li>
+</ul>
+</section>
+<section id="the-future" class="slide level1">
+<h1>The Future</h1>
+<ul>
+<li>MicroPython?</li>
+<li>Nim?</li>
+</ul>
+</section>
+<section id="thanks" class="slide level1">
+<h1>Thanks!</h1>
+<p><a href="https://github.com/Sekenre" class="uri">https://github.com/Sekenre</a></p>
+<p>(If you need CBOR canonicalization come talk to me!)</p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
