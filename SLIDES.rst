@@ -5,7 +5,6 @@ CBOR
 ####
 
 :Author: Kio Smallwood
-:Email: kio.smallwood@flexitricity.com
 :Date: 26/07/2019
 
 Binary Serialization
@@ -56,7 +55,7 @@ I use it for
 .. raw:: html
 
     <aside class="notes">
-		DNS server diagnostic files, fido alliance u2f, sierra wireless
+		DNS grasp discovery protocol, fido 2 client auth over bluetooth, sierra wireless
 	</aside>
 
 The Future
@@ -68,7 +67,9 @@ The Future
 Thanks!
 +++++++
 
-https://github.com/Sekenre
+https://github.com/Sekenre/cbor2_lightning
+
+kio.smallwood@flexitricity.com
 
 (If you need CBOR canonicalization come talk to me!)
 
