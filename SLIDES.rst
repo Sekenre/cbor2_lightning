@@ -5,6 +5,7 @@ CBOR
 ####
 
 :Author: Kio Smallwood
+:Email: kio.smallwood@flexitricity.com
 :Date: 26/07/2019
 
 Binary Serialization
@@ -13,7 +14,7 @@ Binary Serialization
 * Inspired by msgpack
 * IETF proposed standard (RFC 7049)
 * Tag-Length-Value encoding
-* Designed to be compact
+* Designed to have compact implementation
 * Native recursive data structures
 * Extensible tag system ( with an IANA registry )
 
@@ -42,13 +43,21 @@ when to use?
 * When you need richer types than JSON or Msgpack
 * When you don't want to write a schema
 * When it needs to be more compact than XML
+* When you need a compact encoder
 
 I use it for
 ++++++++++++
 
 * Compacting time series data in CSV
 * Internal APIs when I don't want to create a custom JSONEncoder just to send a datetime
-* IoT messaging
+* IoT messaging for constrained nodes
+* Dissecting network protocols
+
+.. raw:: html
+
+    <aside class="notes">
+		DNS server diagnostic files, fido alliance u2f, sierra wireless
+	</aside>
 
 The Future
 ++++++++++

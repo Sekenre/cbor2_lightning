@@ -44,7 +44,7 @@
 <li>Inspired by msgpack</li>
 <li>IETF proposed standard (RFC 7049)</li>
 <li>Tag-Length-Value encoding</li>
-<li>Designed to be compact</li>
+<li>Designed to have compact implementation</li>
 <li>Native recursive data structures</li>
 <li><p>Extensible tag system ( with an IANA registry )</p>
 <ul>
@@ -72,6 +72,7 @@
 <li>When you need richer types than JSON or Msgpack</li>
 <li>When you don't want to write a schema</li>
 <li>When it needs to be more compact than XML</li>
+<li>When you need a compact encoder</li>
 </ul>
 </section>
 <section id="i-use-it-for" class="slide level1">
@@ -79,8 +80,12 @@
 <ul>
 <li>Compacting time series data in CSV</li>
 <li>Internal APIs when I don't want to create a custom JSONEncoder just to send a datetime</li>
-<li>IoT messaging</li>
+<li>IoT messaging for constrained nodes</li>
+<li>Dissecting network protocols</li>
 </ul>
+<aside class="notes">
+    DNS server diagnostic files, fido alliance u2f, sierra wireless
+</aside>
 </section>
 <section id="the-future" class="slide level1">
 <h1>The Future</h1>
